@@ -10,28 +10,41 @@ This project predicts the real-time win probability of the chasing team in an IP
 **Dataset**
 
 Source: Kaggle IPL Dataset:
+
 -matches.csv: Match-level data
+
 -deliveries.csv: Ball-by-ball data
+
 **Filtered**: Removed non-active teams and focused only on matches with clear outcomes (no ties, D/L method, etc.).
 
 
 **Feature Engineering**
 
 -Generated the final dataset with the following key features for the second innings:
+
 -Current Run Rate (CRR)
--Required Run Rate (RRR)
+
+-Required Run Rate (RRR)\
+
 -Runs Left
+
 -Balls Left
+
 -Wickets Remaining
+
 -Match Venue
+
 -Batting and Bowling Teams
 
 
 **Preprocessing**
 
 -Used:
+
 -One-Hot Encoding for categorical features
+
 -ColumnTransformer to combine preprocessing steps
+
 -Pipeline to streamline transformation and model training
 
 
@@ -39,6 +52,7 @@ Source: Kaggle IPL Dataset:
 
 -**Logistic Regression:**
 Chosen as the final model for its interpretable and plausible probability estimates. For example, in a scenario like:
+
 -MI needs 82 from 8 overs at Wankhede with 7 wickets in hand
 Logistic Regression gives ~70% win probability for MI — matching expert intuition.
 
@@ -49,12 +63,14 @@ Higher Accuracy but discarded due to overconfident predictions (e.g., 95% for MI
 **Evaluation**
 
 -Compared models using test set accuracy and domain knowledge
+
 -Prioritized probability realism over just classification accuracy
 
 
 **Tech Stack**
 
 -Python (Pandas, NumPy, Scikit-learn, Matplotlib)
+
 -Jupyter Notebook
 
 
@@ -65,5 +81,7 @@ Higher Accuracy but discarded due to overconfident predictions (e.g., 95% for MI
 **Future Improvements**
 
 -Integrate live match data via API for real-time predictions
+
 -Build a web dashboard to visualize win probabilities dynamically
+
 -Incorporate more features like player form, pitch report, toss result, etc.
