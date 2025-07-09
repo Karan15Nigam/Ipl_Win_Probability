@@ -3,7 +3,7 @@ This project predicts the real-time win probability of the chasing team in an IP
 
 
 **Objective**
-To build a reliable machine learning model that can predict the probability of a team winning while chasing, using match situation data, with a focus on producing plausible and interpretable probabilities rather than just maximum accuracy.
+-To build a reliable machine learning model that can predict the probability of a team winning while chasing, using match situation data, with a focus on producing plausible and interpretable probabilities rather than just maximum accuracy.
 
 
 **Dataset**
@@ -14,7 +14,7 @@ To build a reliable machine learning model that can predict the probability of a
 
 
 **Feature Engineering**
-Generated the final dataset with the following key features for the second innings:
+-Generated the final dataset with the following key features for the second innings:
 -Current Run Rate (CRR)
 -Required Run Rate (RRR)
 -Runs Left
@@ -25,7 +25,7 @@ Generated the final dataset with the following key features for the second innin
 
 
 **Preprocessing**
-Used:
+-Used:
 -One-Hot Encoding for categorical features
 -ColumnTransformer to combine preprocessing steps
 -Pipeline to streamline transformation and model training
